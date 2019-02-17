@@ -1,0 +1,19 @@
+{
+  "name": "jenkins-todolist",
+  "version": "1.0.0",
+  "description": "2017年河北工业大学毕设论文项目",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wuyxp/Jenkins-TodoList.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wuyxp/Jenkins-TodoList/issues"
+  },
+  "homepage": "https://github.com/wuyxp/Jenkins-TodoList#readme"
+}
