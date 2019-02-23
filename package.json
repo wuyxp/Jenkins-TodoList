@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/wuyxp/Jenkins-TodoList/issues"
   },
-  "homepage": "https://github.com/wuyxp/Jenkins-TodoList#readme"
+  "homepage": "https://github.com/wuyxp/Jenkins-TodoList#readme",
+  "dependencies": {}
 }
