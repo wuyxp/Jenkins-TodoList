@@ -3,7 +3,7 @@ import rootReducer from '../reducers'
 const initStore = {
   todos: [{
     id: 1111111,
-    title: '添加的第一天测试数据',
+    title: '使用jenkins进行持续构建打包',
     createTime: 1550890987416,
     text: '添加的第一天测试数据添加的第一天测试数据添加的第一天测试数据添加的第一天测试数据',
     completed: true 
