@@ -2,11 +2,17 @@ import React, { Component } from 'react'
 import { Layout, Button, Radio } from 'antd';
 import { connect } from 'react-redux'
 import List from '../component/List'
+import Create from './Create'
 import { VisibilityFilters, setVisibilityFilter } from '../actions'
 class Home extends Component{
   constructor(props){
     super(props)
+    this.state = {
+      visible: false
+    }
     this.onChange = this.onChange.bind(this)
+    this.openCreate = this.openCreate.bind(this)
+    this.closeCreate = this.closeCreate.bind(this)
   }
   getTodos(){
     return this.props.todos.filter(todo => {
@@ -24,12 +30,22 @@ class Home extends Component{
   onChange(event){
     this.props.filterTodos(event.target.value)
   }
+  openCreate(){
+    this.setState({
+      visible: true
+    })
+  }
+  closeCreate(){
+    this.setState({
+      visible: false
+    })
+  }
   render(){
     return (
       <Layout>
         <Layout.Header style={{ textAlign: 'center', color: '#fff' }}>
           TODO LIST
-          <Button style={{ marginLeft: '20px'}} type="primary">添加</Button>
+          <Button style={{ marginLeft: '20px'}} type="primary" onClick={this.openCreate}>添加</Button>
         </Layout.Header>
         <Radio.Group style={{ padding: '30px 50px'}} onChange={this.onChange} value={this.props.filter}>
           <Radio.Button value={VisibilityFilters.SHOW_ALL}>全部</Radio.Button>
@@ -39,6 +55,10 @@ class Home extends Component{
         <Layout.Content style={{ padding: '0 50px'}}>
           <List data={this.getTodos()}/>
         </Layout.Content>
+        <Create
+          visible={this.state.visible}
+          closeCreate={this.closeCreate}
+        />
       </Layout>
     )
   }

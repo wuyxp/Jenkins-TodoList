@@ -2,12 +2,14 @@ const todos = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
       return [
-        ...state,
         {
           id: action.id,
-          text: action.text,
+          title: action.todo.title,
+          createTime: action.todo.createTime,
+          text: action.todo.text,
           completed: false
-        }
+        },
+        ...state
       ]
     case 'TOGGLE_TODO':
       return state.map(todo =>
