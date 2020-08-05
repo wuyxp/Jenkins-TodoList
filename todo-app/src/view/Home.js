@@ -45,6 +45,7 @@ class Home extends Component{
       <Layout>
         <Layout.Header style={{ textAlign: 'center', color: '#fff' }}>
           TODO LIST
+          <p style={{ color: '#ccc', fontSize: '12px'}}>使用jenkins 自动化部署。 docker 方式启动</p>
           <Button style={{ marginLeft: '20px'}} type="primary" onClick={this.openCreate}>添加</Button>
         </Layout.Header>
         <Radio.Group style={{ padding: '30px 50px'}} onChange={this.onChange} value={this.props.filter}>
