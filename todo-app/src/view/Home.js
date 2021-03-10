@@ -47,6 +47,7 @@ class Home extends Component{
           TODO LIST
           <span style={{ color: '#ccc', fontSize: '12px'}}>使用jenkins 自动化部署。 docker 方式启动</span>
           <span style={{ color: '#', fontSize: '10px'}}>时间2021年3月1日22:11:51</span>
+          <span style={{ color: '#', fontSize: '10px'}}>更新时间 2021年3月10日21:24:53</span>
           <Button style={{ marginLeft: '20px'}} type="primary" onClick={this.openCreate}>添加</Button>
         </Layout.Header>
         <Radio.Group style={{ padding: '30px 50px'}} onChange={this.onChange} value={this.props.filter}>
